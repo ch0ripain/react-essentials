@@ -70,6 +70,7 @@ main h2 {
 
 #examples {
   margin: 3rem auto;
+  min-height: 60vh;
 }
 
 #examples h2 {
