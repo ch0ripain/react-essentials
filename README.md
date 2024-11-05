@@ -25,7 +25,7 @@ function App() {
 > A component is a JavaScript function that must return a single renderable element. To return multiple elements, wrap them in a parent element like a div or use a React Fragment (<> </>)
 
 ## 💻 JSX 💻
-JSX is an extension of JavaScript that allows you to write HTML-like syntax within your JavaScript code. You can include built-in HTML elements, actions, behaviors, and even JavaScript expressions or functionalities using curly braces {}.
+JSX is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript files. It enables you to include standard HTML elements, behaviors, and JavaScript expressions using curly braces {}. JSX also supports conditional rendering and the use of functions like .map() to create dynamic user interfaces, making it easier to combine markup with logic seamlessly.
 ```javascript
 export default function CoreConcepts() {
   return (
