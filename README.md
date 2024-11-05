@@ -2,14 +2,99 @@
 ## 🧩 Components
 A component is a standard JavaScript function that starts with an uppercase letter and returns renderable content. Components are reusable and customizable, making it easier to build complex UIs.
 
+```javascript
+import CoreConcepts from "./components/CoreConcepts";
+import Examples from "./components/Examples";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <main>
+        <CoreConcepts />
+        <Examples />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+```
+
 ## 💻 JSX
-JSX is an extension of JavaScript that allows you to write HTML-like syntax within your JavaScript code. You can include built-in HTML elements, actions, behaviors, and even JavaScript expressions using curly braces {}.
+JSX is an extension of JavaScript that allows you to write HTML-like syntax within your JavaScript code. You can include built-in HTML elements, actions, behaviors, and even JavaScript expressions or functionalities using curly braces {}.
+```javascript
+export default function CoreConcepts() {
+  return (
+    <Section id="core-concepts" title="Core Concepts">
+      <ul>
+        {CORE_CONCEPTS.map((concept) => (
+          <CoreConcept key={concept.title} {...concept} />
+        ))}
+      </ul>
+    </Section>
+  );
+}
+```
 
 ## 🎛️ Props
 Props (short for properties) act as parameters in our components. They allow you to pass data from one component to another. You can access prop values using props.valueName, destructuring like { valueProperty }, or by using the spread operator to collect all remaining props.
+```javascript
+import { CORE_CONCEPTS } from "../data";
+export default function CoreConcepts() {
+...
+          <ul>
+        {CORE_CONCEPTS.map((concept) => (
+          <CoreConcept key={concept.title} {...concept} />
+        ))}
+      </ul>
+...
+}
+
+export default function CoreConcept({ image, title, description }) {
+  return (
+    <li>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+  );
+}
+```
 
 ## 🔄 State
 State is a React hook that enables components to manage and display dynamic changes. You first define the initial state based on your requirements. To update the state, you utilize a function provided by the useState hook, allowing the component to re-render with new data.
+```javascript
+import { useState } from 'react';
+
+// Example of an initial state, which can be a string, number, or boolean.
+const INITIAL_STATE = 'string' | 1000 | true | false; 
+const [state, setState] = useState(INITIAL_STATE);
+
+// Function to handle state changes.
+function handleChange(newStateValue) {
+    setState(newStateValue);
+}
+
+// Updating state based on the previous state value.
+setState(prevState => !prevState); // Toggle boolean: true => false
+
+setState(prevState => {
+    return {
+        ...prevState, // Preserve existing data
+        propertyName: newValue // Update the specific property
+    };
+});
+
+// Note: The spread operator (...) creates a shallow copy (level 1). 
+// For nested arrays or objects, you must copy each level into a new variable.
+setState(prevArray => {
+    const newArray = [...prevArray.map(el => [...el])];
+    // Continue to map or modify newArray as needed.
+});
+
+```
 ---
 <p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
 <p align="center">🐸 I hope this README helps you in some way! 🐸</p>
