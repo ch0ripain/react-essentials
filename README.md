@@ -26,6 +26,9 @@ function App() {
 
 ## 💻 JSX 💻
 JSX is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript files. It enables you to include standard HTML elements, behaviors, and JavaScript expressions using curly braces {}. JSX also supports conditional rendering and the use of functions like .map() to create dynamic user interfaces, making it easier to combine markup with logic seamlessly.
+> [!NOTE]
+> In many projects, you may encounter JSX code outside of .jsx files, which is normal. Ultimately, all your code is transpiled to JavaScript that browsers can understand, ensuring compatibility across different environments.
+
 ```javascript
 export default function CoreConcepts() {
   return (
@@ -39,11 +42,12 @@ export default function CoreConcepts() {
   );
 }
 ```
-> [!NOTE]
-> In many projects, you may encounter JSX code outside of .jsx files, which is normal. Ultimately, all your code is transpiled to JavaScript that browsers can understand, ensuring compatibility across different environments.
 
 ## 🎛️ Props 🎛️
 Props (short for properties) act as parameters in our components. They allow you to pass data from one component to another. You can access prop values using props.valueName, destructuring like { valueProperty }, or by using the spread operator to collect all remaining props.
+> [!NOTE]
+> Props in React are immutable, meaning they cannot be changed by the component that receives them. This immutability promotes predictable behavior and encourages reusable components. If a component needs to update its output based on user interactions, it should manage its own state instead.
+
 ```javascript
 import { CORE_CONCEPTS } from "../data";
 export default function CoreConcepts() {
@@ -66,11 +70,12 @@ export default function CoreConcept({ image, title, description }) {
   );
 }
 ```
-> [!NOTE]
-> Props in React are immutable, meaning they cannot be changed by the component that receives them. This immutability promotes predictable behavior and encourages reusable components. If a component needs to update its output based on user interactions, it should manage its own state instead.
 
 ## 🔄 State 🔄
 State is a React hook that enables components to manage and display dynamic changes. You first define the initial state based on your requirements. To update the state, you utilize a function provided by the useState hook, allowing the component to re-render with new data.
+> [!NOTE]
+> State is local to the component that defines it, triggering re-renders to display updated data. To share state between components, lift it to a common ancestor and pass it as a prop. Always utilize the updater function when modifying state based on its previous value to maintain accuracy.
+
 ```javascript
 import { useState } from 'react';
 
@@ -100,8 +105,7 @@ setState(prevArray => {
     // Continue to map or modify newArray as needed.
 });
 ```
-> [!NOTE]
-> State is local to the component that defines it, triggering re-renders to display updated data. To share state between components, lift it to a common ancestor and pass it as a prop. Always utilize the updater function when modifying state based on its previous value to maintain accuracy.
+
 ---
 <p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
 <p align="center">🐸 I hope this README helps you in some way! 🐸</p>
