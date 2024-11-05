@@ -21,6 +21,8 @@ function App() {
   );
 }
 ```
+> [!NOTE]
+> A component is a JavaScript function that must return a single renderable element. To return multiple elements, wrap them in a parent element like a <div> or use a React Fragment (<> </>)
 
 ## 💻 JSX
 JSX is an extension of JavaScript that allows you to write HTML-like syntax within your JavaScript code. You can include built-in HTML elements, actions, behaviors, and even JavaScript expressions or functionalities using curly braces {}.
@@ -37,6 +39,8 @@ export default function CoreConcepts() {
   );
 }
 ```
+> [!NOTE]
+> In many projects, you may encounter JSX code outside of .jsx files, which is normal. Ultimately, all your code is transpiled to JavaScript that browsers can understand, ensuring compatibility across different environments.
 
 ## 🎛️ Props
 Props (short for properties) act as parameters in our components. They allow you to pass data from one component to another. You can access prop values using props.valueName, destructuring like { valueProperty }, or by using the spread operator to collect all remaining props.
@@ -62,6 +66,8 @@ export default function CoreConcept({ image, title, description }) {
   );
 }
 ```
+> [!NOTE]
+> Props in React are immutable, meaning they cannot be changed by the component that receives them. This immutability promotes predictable behavior and encourages reusable components. If a component needs to update its output based on user interactions, it should manage its own state instead.
 
 ## 🔄 State
 State is a React hook that enables components to manage and display dynamic changes. You first define the initial state based on your requirements. To update the state, you utilize a function provided by the useState hook, allowing the component to re-render with new data.
@@ -93,8 +99,9 @@ setState(prevArray => {
     const newArray = [...prevArray.map(el => [...el])];
     // Continue to map or modify newArray as needed.
 });
-
 ```
+> [!NOTE]
+> State is local to the component that defines it, triggering re-renders to display updated data. To share state between components, lift it to a common ancestor and pass it as a prop. Always utilize the updater function when modifying state based on its previous value to maintain accuracy.
 ---
 <p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
 <p align="center">🐸 I hope this README helps you in some way! 🐸</p>
