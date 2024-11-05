@@ -34,7 +34,7 @@ export default function CoreConcepts() {
   return (
     <Section id="core-concepts" title="Core Concepts">
       <ul>
-        {CORE_CONCEPTS.map((concept) => (
+        {CORE_CONCEPTS.length > 0 && CORE_CONCEPTS.map((concept) => (
           <CoreConcept key={concept.title} {...concept} />
         ))}
       </ul>
