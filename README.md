@@ -1,5 +1,5 @@
-# 🚀 A Quick Introduction to React Essentials
-## 🧩 Components
+# 🚀 A Quick Introduction to React Essentials 🚀
+## 🧩 Components 🧩
 A component is a standard JavaScript function that starts with an uppercase letter and returns renderable content. Components are reusable and customizable, making it easier to build complex UIs.
 
 ```javascript
@@ -22,9 +22,9 @@ function App() {
 }
 ```
 > [!NOTE]
-> A component is a JavaScript function that must return a single renderable element. To return multiple elements, wrap them in a parent element like a <div> or use a React Fragment (<> </>)
+> A component is a JavaScript function that must return a single renderable element. To return multiple elements, wrap them in a parent element like a div or use a React Fragment (<> </>)
 
-## 💻 JSX
+## 💻 JSX 💻
 JSX is an extension of JavaScript that allows you to write HTML-like syntax within your JavaScript code. You can include built-in HTML elements, actions, behaviors, and even JavaScript expressions or functionalities using curly braces {}.
 ```javascript
 export default function CoreConcepts() {
@@ -42,7 +42,7 @@ export default function CoreConcepts() {
 > [!NOTE]
 > In many projects, you may encounter JSX code outside of .jsx files, which is normal. Ultimately, all your code is transpiled to JavaScript that browsers can understand, ensuring compatibility across different environments.
 
-## 🎛️ Props
+## 🎛️ Props 🎛️
 Props (short for properties) act as parameters in our components. They allow you to pass data from one component to another. You can access prop values using props.valueName, destructuring like { valueProperty }, or by using the spread operator to collect all remaining props.
 ```javascript
 import { CORE_CONCEPTS } from "../data";
@@ -69,7 +69,7 @@ export default function CoreConcept({ image, title, description }) {
 > [!NOTE]
 > Props in React are immutable, meaning they cannot be changed by the component that receives them. This immutability promotes predictable behavior and encourages reusable components. If a component needs to update its output based on user interactions, it should manage its own state instead.
 
-## 🔄 State
+## 🔄 State 🔄
 State is a React hook that enables components to manage and display dynamic changes. You first define the initial state based on your requirements. To update the state, you utilize a function provided by the useState hook, allowing the component to re-render with new data.
 ```javascript
 import { useState } from 'react';
