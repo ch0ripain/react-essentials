@@ -1,4 +1,4 @@
-# 🚀 A Quick Introduction to React Essentials 🚀
+<h1 align='center'> 🚀 A Quick Introduction to React Essentials 🚀</h1>
 ## 🧩 Components 🧩
 A component is a standard JavaScript function that starts with an uppercase letter and returns renderable content. Components are reusable and customizable, making it easier to build complex UIs.
 
@@ -107,5 +107,4 @@ setState(prevArray => {
 ```
 
 ---
-<p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
-<p align="center">🐸 I hope this README helps you in some way! 🐸</p>
+<p align="center">🐸 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🐸</p>
