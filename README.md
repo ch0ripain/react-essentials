@@ -1,4 +1,5 @@
 <h1 align='center'> 🚀 A Quick Introduction to React Essentials 🚀</h1>
+
 ## 🧩 Components 🧩
 A component is a standard JavaScript function that starts with an uppercase letter and returns renderable content. Components are reusable and customizable, making it easier to build complex UIs.
 
